@@ -34,38 +34,35 @@
         <form action="https://wp.zybooks.com/form-viewer.php" method="post">
 			<!-- Full name -->
 			<div>
-			  <label for="fullname">Full Name (required):</label>
-			  <input type="text" id="fullname" name="fullname" required>
+				<label for="full-name">Full Name<span aria-hidden="true">*</span></label>
+				<input type="text" id="full-name" name="full-name" required>
 			</div>
   
 			<!-- Email -->
 			<div>
-			  <label for="email">Email (required):</label>
-			  <input type="email" id="email" name="email" required>
+				<label for="email">Email<span aria-hidden="true">*</span></label>
+				<input type="email" id="email" name="email" required>
 			</div>
   
 			<!-- Phone -->
 			<div>
-			  <label for="phone">Phone Number (required):</label>
-			  <input type="tel" id="phone" name="phone" required>
+				<label for="phone">Phone<span aria-hidden="true">*</span></label>
+				<input type="tel" id="phone" name="phone" required>
 			</div>
   
 			<!-- Preferred contact method -->
 			<fieldset>
-			  <legend>Preferred Contact Method (required):</legend>
-			  <div>
-				<input type="radio" id="contactEmail" name="contactMethod" value="email" required>
-				<label for="contactEmail">Email</label>
-			  </div>
-			  <div>
-				<input type="radio" id="contactPhone" name="contactMethod" value="phone">
-				<label for="contactPhone">Phone</label>
-			  </div>
-			</fieldset>
+				<legend>Preferred Contact Method <span aria-hidden="true">*</span></legend>
+				<input type="radio" id="contact-phone" name="preferred-contact" value="phone" required>
+				<label for="contact-phone">Phone</label>
+			  
+				<input type="radio" id="contact-email" name="preferred-contact" value="email">
+				<label for="contact-email">Email</label>
+			  </fieldset>			  
   
 			<!-- State of residence -->
 			<div>
-			  <label for="state">State of Residence (required):</label>
+			  <label for="state">State of Residence<span aria-hidden="true">*</span></label>
 			  <select id="state" name="state" required>
 				<option value="">--Please choose a state--</option>
 				<option value="AL">Alabama</option>

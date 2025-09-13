@@ -31,43 +31,55 @@
 			<p>Today we'll be focusing on coding a form that is accessible and semantic, and we'll also briefly discuss skip links for your website. Forms can be a source of frustration for users, whether they specifically need help with accessing your website or if they just prefer that your forms be easy to use and submit. Follow along as we code this in class, and please ask questions as they arise. Let's make a form!</p>
 
 <!-- 	-------- TO-DO: ADD FORM CODE HERE DURING CLASS, FOLLOW ALONG TO COMPLETE -------- -->
-<form action="https://wp.zybooks.com/form-viewer.php" method="post">
-	<!-- Full name -->
-	<div>
-	  <label for="fullname">Full Name (required):</label>
-	  <input type="text" id="fullname" name="fullname" required>
+<form action="https://wp.zybooks.com/form-viewer.php" method="post" class="contact-form" novalidate>
+	<div class="form-group required">
+	  <label for="fullname">Full name
+		<span class="required-star" aria-hidden="true">*</span>
+		<span class="sr-only"> required</span>
+	  </label>
+	  <input type="text" id="fullname" name="fullname" required autocomplete="name">
 	</div>
   
-	<!-- Email -->
-	<div>
-	  <label for="email">Email (required):</label>
-	  <input type="email" id="email" name="email" required>
+	<div class="form-group required">
+	  <label for="email">Email
+		<span class="required-star" aria-hidden="true">*</span>
+		<span class="sr-only"> required</span>
+	  </label>
+	  <input type="email" id="email" name="email" required autocomplete="email">
 	</div>
   
-	<!-- Phone -->
-	<div>
-	  <label for="phone">Phone Number (required):</label>
-	  <input type="tel" id="phone" name="phone" required>
+	<div class="form-group required">
+	  <label for="phone">Phone
+		<span class="required-star" aria-hidden="true">*</span>
+		<span class="sr-only"> required</span>
+	  </label>
+	  <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="e.g. 555-555-5555">
 	</div>
   
-	<!-- Preferred contact method -->
-	<fieldset>
-	  <legend>Preferred Contact Method (required):</legend>
-	  <div>
-		<input type="radio" id="contactEmail" name="contactMethod" value="email" required>
-		<label for="contactEmail">Email</label>
-	  </div>
-	  <div>
-		<input type="radio" id="contactPhone" name="contactMethod" value="phone">
-		<label for="contactPhone">Phone</label>
+	<fieldset class="form-group required">
+	  <legend>Preferred contact method
+		<span class="required-star" aria-hidden="true">*</span>
+		<span class="sr-only"> required</span>
+	  </legend>
+	  <div class="radio-group">
+		<div class="radio-item">
+		  <input type="radio" id="contactEmail" name="contactMethod" value="email" required>
+		  <label for="contactEmail">Email</label>
+		</div>
+		<div class="radio-item">
+		  <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+		  <label for="contactPhone">Phone</label>
+		</div>
 	  </div>
 	</fieldset>
   
-	<!-- State of residence -->
-	<div>
-	  <label for="state">State of Residence (required):</label>
+	<div class="form-group required">
+	  <label for="state">State of residence
+		<span class="required-star" aria-hidden="true">*</span>
+		<span class="sr-only"> required</span>
+	  </label>
 	  <select id="state" name="state" required>
-		<option value="">--Please choose a state--</option>
+		<option value="">-- Please choose a state --</option>
 		<option value="AL">Alabama</option>
 		<option value="AK">Alaska</option>
 		<option value="AZ">Arizona</option>
@@ -121,17 +133,15 @@
 	  </select>
 	</div>
   
-	<!-- Comments -->
-	<div>
-	  <label for="comments">Comments:</label>
-	  <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+	<div class="form-group">
+	  <label for="comments">Comments</label>
+	  <textarea id="comments" name="comments" rows="6"></textarea>
 	</div>
   
-	<!-- Submit button -->
-	<div>
+	<div class="form-group">
 	  <button type="submit">Submit</button>
 	</div>
-  </form>  
+  </form>   
 		</article>
 	</main>
 	<footer>
